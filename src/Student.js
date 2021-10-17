@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const url = 'https://institute-backend.herokuapp.comapi/v1/students/'
+const url = 'https://institute-backend.herokuapp.com/v1/students/'
 
 class Student extends React.Component {
   constructor(props){
