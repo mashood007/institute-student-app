@@ -13,8 +13,13 @@ class Student extends React.Component {
     }
     this.rollnoChange = this.rollnoChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.refresh = this.refresh.bind(this);
   }
 
+  refresh(event) {
+    event.preventDefault();
+    this.setState({logged_in: false, student: [] })
+  }
 
   rollnoChange(event) {
     this.setState({id: event.target.value});
@@ -59,6 +64,7 @@ class Student extends React.Component {
         <div className='container'>
           <br/>
           <br/>
+          <button className='btn btn-info' onClick={this.refresh}>Try another</button>
           <div className='row'>
             <div className='col-sm-3'>Student Roll.No</div>
             <div className='col-sm-1'>{student.id}</div>
